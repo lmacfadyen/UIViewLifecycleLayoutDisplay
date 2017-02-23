@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var blueHeight: NSLayoutConstraint!
     
-    @IBAction func heightPressed(sender: AnyObject) {
+    @IBAction func heightPressed(_ sender: AnyObject) {
         view.layoutIfNeeded()
         if(self.blueHeight.constant == 25.0)
         {
@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         {
             self.blueHeight.constant = 25.0
         }
-        UIView.animateWithDuration(2.0) {
+        UIView.animate(withDuration: 2.0, animations: {
             self.view.layoutIfNeeded()
-        }
+        }) 
     }
     
     override func viewDidLoad() {
